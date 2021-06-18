@@ -29,7 +29,7 @@ html{
     color: var(--dark-greyish-blue);
     position: absolute;
     inset: -100% 0 0 -190%;
-    z-index: 1;
+    z-index: 0;
 }
 .bottom{
     color: var(--dark-greyish-blue);
