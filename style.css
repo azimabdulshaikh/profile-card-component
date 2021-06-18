@@ -1,0 +1,120 @@
+:root{
+    --dark-cyan:hsl(185, 75%, 39%);
+    --dark-blue:hsl(229, 23%, 23%);
+    --dark-greyish-blue:hsl(227, 10%, 46%);
+    --dark-gray:hsl(0, 0%, 59%);
+    --font-size:18px;
+    --font-family:'Kumbh Sans', sans-serif;
+}
+*,
+::after,
+::before{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: var(--font-family);
+    text-rendering: optimizeLegibility;
+    font-size: var(--font-size);
+}
+
+.hero{
+    background-color:var(--dark-cyan);
+    height: 100vh;
+    position: relative;
+    width: 100vw;
+}
+.top{
+    color: var(--dark-greyish-blue);
+    position: absolute;
+    inset: -100% 0 0 -190%;
+    z-index: 1;
+}
+.bottom{
+    color: var(--dark-greyish-blue);
+    position: absolute;
+    inset: 46% 0 0 28%;
+    z-index: 1;
+}
+
+.section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+.card{
+    width: 320px;
+    border-radius:10px;
+    background-color: aliceblue;
+    overflow: hidden;
+    text-align: center;
+
+}
+.card-header{
+    position: relative;
+    background-image: url(./images/bg-pattern-card.svg);
+    background-size: cover;
+    height: 135px;
+}
+.victor{
+    position: absolute;
+    top:5em;
+    left:7em;
+    width: 5em;
+    height: 5em;
+    border: 5px solid whitesmoke;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.card-body{
+    height: 135px;
+    padding: 4rem 0 2rem  0;
+}
+.name{
+    margin-left: 0.2rem;
+    font-size: var(--font-size);
+    font-weight: 700;
+}
+.number{
+    font-weight: 400;
+    color: var(--dark-cyan);
+}
+.place,
+.meta,
+.age{
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--dark-cyan);
+    margin-top: 0.5rem;
+}
+.card-footer{
+    border-top: 1px solid hsl(0, 3%, 86%);
+    display: flex;
+}
+.items{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    height: 100px;
+}
+@media (min-width:900px) {
+    .hero{
+        max-width: 100%;
+        margin: 0 auto;
+        height: 100vh;
+    }
+    .top{
+        inset: -30rem 0 0 -10rem;
+    }
+    .bottom{
+        inset: 50% 0 0 47%;
+    }
+}   
